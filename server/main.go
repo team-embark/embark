@@ -9,8 +9,7 @@ import (
     firebase "firebase.google.com/go/v4"
     "firebase.google.com/go/v4/auth"
     "github.com/rs/cors"
-
-
+    "google.golang.org/api/option"
 )
 
 var Ctx context.Context = context.Background()
@@ -26,7 +25,7 @@ func main() {
 
     mux.HandleFunc("/", helloWorld)
 
-    corsrHandler := cors.New(cors.Options{
+    corsHandler := cors.New(cors.Options{
         AllowedOrigins: []string{"*"},
         AllowedMethods: []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
         AllowedHeaders: []string{"Context-Type", "Authorization"},
