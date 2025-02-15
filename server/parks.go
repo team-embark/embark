@@ -4,6 +4,7 @@ import (
 	"net/http"
 	"encoding/json"
 	firestore "cloud.google.com/go/firestore"
+	"time"
 )
 
 func visitPark(w http.ResponseWriter, r *http.Request) {
@@ -23,6 +24,7 @@ func visitPark(w http.ResponseWriter, r *http.Request) {
 	if r.Method == "POST" { // sets park to visted = true
 		_, err = userRef.Collection("parks").Doc(park_name).Set(Ctx, map[string]interface{}{
 			"visited": true,
+			"time_visited": time.Now(),
 		}, firestore.MergeAll)
 		if err != nil {
 			http.Error(w, "Failed to update park visited status", http.StatusInternalServerError)
@@ -50,8 +52,8 @@ func getAllParkInfo(w http.ResponseWriter, r *http.Request) { // returns true/fa
 
 	// return parks' info
 	parks := [3]string{"yosemite", "josh", "redwood"}
-	var data map[string]interface{}
-	for _,p := range parks {// add p into data
+	var data = make(map[string]interface{})
+	for _,p := range parks { // add p into data
 		// p : true/false
 		pdata, err := userRef.Collection("parks").Doc(p).Get(Ctx)
 		if err != nil {
