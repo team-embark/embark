@@ -35,12 +35,6 @@ func authUser(w http.ResponseWriter, r *http.Request) {
 
     userRef := Client.Collection("users").Doc(uid)
     doc, err := userRef.Get(Ctx)
-
-    if err != nil {
-        http.Error(w, "Failed to get context", http.StatusInternalServerError)
-        return
-    }
-
     if !doc.Exists() {
         _, err = userRef.Set(Ctx, map[string]interface{}{
             "uid": uid,
