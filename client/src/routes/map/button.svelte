@@ -46,7 +46,6 @@
         border: none;
         border-radius: 5px;
         aspect-ratio:1
-
 	}
     button:hover {
         background-color: #9ac0f5; 
