@@ -24,4 +24,5 @@ client/vite.config.ts.timestamp-*
 
 server/embark.json
 server/embark
+server/embark.exe
 server/go.sum
