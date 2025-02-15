@@ -6,7 +6,7 @@ client/.vercel
 client/.netlify
 client/.wrangler
 client/.svelte-kit
-client//build
+client/build
 
 # OS
 client/.DS_Store
@@ -21,3 +21,7 @@ client/!.env.test
 # Vite
 client/vite.config.js.timestamp-*
 client/vite.config.ts.timestamp-*
+
+server/embark.json
+server/embark
+server/go.sum
