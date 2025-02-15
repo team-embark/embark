@@ -26,6 +26,7 @@ func main() {
 	mux.HandleFunc("/", helloWorld)
 	mux.HandleFunc("/auth", authUser)
 	mux.HandleFunc("/parks/{park}", visitPark)
+	mux.HandleFunc("/allparks", getAllParkInfo)
 
 	corsHandler := cors.New(cors.Options{
 		AllowedOrigins:   []string{"*"},
