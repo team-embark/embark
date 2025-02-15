@@ -1,4 +1,4 @@
-package embark
+package main
 
 import (
 	"fmt"
