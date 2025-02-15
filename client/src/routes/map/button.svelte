@@ -13,20 +13,45 @@
 	</button>
 
 <style>
+      .image-container {
+        position: relative; 
+        display: inline-block; 
+     }
+     .image-container Button {
     
-	.primary{
+    position: absolute; 
+    transform: translate(-50%, -50%); 
+
+    }
+
+	.button1{   
+        position: absolute; 
+        top: 22%;
+        left: 28%;
+		background-color: transparent;
+        border: none;
+        border-radius: 5px;
+        aspect-ratio:1
+
+	}
+	.button2{   
+        position: absolute; 
+        top: 20%;
+        left: 8%;
+		background-color: transparent;
+        border: none;
+        border-radius: 5px;
+        aspect-ratio:1
+
+	}.button3{   
+        position: absolute; 
+        bottom: -40%;
+        right: 35%;
         
 		background-color: transparent;
         border: none;
         border-radius: 5px;
-	}
-	
-	.sm {
-		font-size:1em;
-		padding:0.1em;
-	}
-	.lg {
-		font-size:2em
+        aspect-ratio:1
 	}
     button:hover {
         background-color: #9ac0f5; 
