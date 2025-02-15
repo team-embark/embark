@@ -59,32 +59,18 @@ func authUser(w http.ResponseWriter, r *http.Request) {
             http.Error(w, "Failed to create park collection", http.StatusInternalServerError)
             return
         }
+
+        parks := [3]string{"yosemite", "josh", "redwood"}
         
-        _, err = userRef.Collection("parks").Doc("yosemite").Set(Ctx, map[string]interface{}{
-            "visited": false,
-        })
-
-        if err != nil {
-            http.Error(w, "Failed to create park", http.StatusInternalServerError)
-            return
-        }
-
-        _, err = userRef.Collection("parks").Doc("redwood").Set(Ctx, map[string]interface{}{
-            "visited": false,
-        })
-
-        if err != nil {
-            http.Error(w, "Failed to create park", http.StatusInternalServerError)
-            return
-        }
-
-        _, err = userRef.Collection("parks").Doc("josh").Set(Ctx, map[string]interface{}{
-            "visited": false,
-        })
-
-        if err != nil {
-            http.Error(w, "Failed to create park", http.StatusInternalServerError)
-            return
+        for _,p := range parks {
+            _, err = userRef.Collection("parks").Doc(p).Set(Ctx, map[string]interface{}{
+                "visited": false,
+                "time_visited": nil,
+            })
+            if err != nil {
+                http.Error(w, "Failed to create park", http.StatusInternalServerError)
+                return
+            }
         }
     }
     resp := map[string]interface{}{
