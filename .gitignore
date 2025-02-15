@@ -21,3 +21,5 @@ client/!.env.test
 # Vite
 client/vite.config.js.timestamp-*
 client/vite.config.ts.timestamp-*
+
+server/embark.json
