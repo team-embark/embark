@@ -1,1 +1,1 @@
-package embark
+package main

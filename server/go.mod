@@ -1,4 +1,4 @@
-module server
+module embark
 
 go 1.23.5
 
