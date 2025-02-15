@@ -7,7 +7,7 @@ import (
 	firestore "cloud.google.com/go/firestore"
 )
 
-func park(w http.ResponseWriter, r *http.Request) {
+func visitPark(w http.ResponseWriter, r *http.Request) {
 	token, err := getAuthToken(r.Header.Get("Authorization"))
     if err != nil {
         http.Error(w, "Failed to authenticate user", http.StatusInternalServerError)
