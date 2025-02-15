@@ -17,6 +17,12 @@
         position: relative; 
         display: inline-block; 
      }
+     .image-container Button {
+    
+    position: absolute; 
+    transform: translate(-50%, -50%); 
+
+    }
 
 	.button1{   
         position: absolute; 
