@@ -24,6 +24,7 @@ func main() {
 	mux := &http.ServeMux{}
 
 	mux.HandleFunc("/", helloWorld)
+	mux.HandleFunc("/auth", authUser)
 
 	corsHandler := cors.New(cors.Options{
 		AllowedOrigins:   []string{"*"},
