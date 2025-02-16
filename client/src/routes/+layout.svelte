@@ -13,19 +13,19 @@
 
 <div class="banner">
   <nav>
-	<Button class="transparentBtn" on:click={() => goto("/")}>
-        <img src="/favicon.png" alt="logo" width= 30/>
-    </Button>
-    EMBARK
-    <Button class="transparentBtn" on:click={logout}>
-        Log Out
-    </Button>
-</nav>
+        <Button class="transparentBtn" on:click={() => goto("/")}>
+            <img src="/embark-icon.png" alt="logo" width="50"/>
+        </Button>
+        <img src="/embark-text.png" alt="California2" width= "150"/>  
+        <Button class="transparentBtn" style="position: absolute; top: 1000px;" on:click={logout}>
+            Log Out
+        </Button>
+    </nav>
 </div>
 
 <style>
     .banner {
-        background:rgb(193, 122, 67);
+        background:hsl(0, 0.00%, 100.00%);
         padding: 20px;
         color: white;
         font-size: 1.5rem;

@@ -54,8 +54,10 @@
         }
         .transparentBtn {
             border-width: 0px;
-            color: white;
-            font-size: 1em;
+            color: black;
+            font-size: 1.5rem;
+            font-family: "Futura", "Trebuchet MS", Arial, sans-serif;
+            font-style: italic;
             background-color: transparent;
             
         }
