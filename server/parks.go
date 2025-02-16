@@ -30,7 +30,23 @@ func visitPark(w http.ResponseWriter, r *http.Request) {
 			http.Error(w, "Failed to update park visited status", http.StatusInternalServerError)
 		}
 	} else if r.Method == "GET" { // return park info
-		
+	    var data map[string]interface{}
+        doc, err := userRef.Collection("parks").Doc(park_name).Get(Ctx)
+        if err != nil {
+            http.Error(w, "Failed to get context", http.StatusUnauthorized)
+            return
+        }
+
+        doc.DataTo(&data)
+
+        jsonResp, err := json.Marshal(data)
+        if err != nil {
+            http.Error(w, "Error mashaling JSON", http.StatusInternalServerError)
+            return
+        }
+        w.Header().Set("Context-Type", "application/json")
+        w.WriteHeader(http.StatusOK)
+        w.Write(jsonResp)
 	} else {
 		http.Error(w, "Invalid response method", http.StatusBadRequest)
 	}
