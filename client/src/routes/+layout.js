@@ -1,8 +1,10 @@
-import { redirect } from '@sveltejs/kit';
+import { goto } from "$app/navigation";
 import { auth } from "../firebase_yippee";
 
-export const load = ({url}) => {
-    if (!auth.currentUser && url.pathname !== "/login") {
-        return redirect(308, "/login");
-    }
-}
+// export const load = ({url}) => {
+//     console.log(auth.currentUser);
+//     console.log(url.pathname);
+//     if (!auth.currentUser && url.pathname == "/") {
+//         goto("/login");
+//     }
+// }
