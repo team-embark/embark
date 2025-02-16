@@ -2,11 +2,12 @@
     import Button from "./button.svelte"
     import {app, auth, provider} from '../../firebase_yippee';
     import {signInWithPopup, onAuthStateChanged, GoogleAuthProvider} from 'firebase/auth';
-    import { redirect } from "@sveltejs/kit";
+    import {goto} from "$app/navigation";
 
     let buttonText = "Sign in my scarab";
 
     function handleLogin() {
+        console.log("hi");
         if (!auth.currentUser) {
             signInWithPopup(auth, provider)
                 .then(async (result) => {
@@ -19,6 +20,7 @@
                     const idToken = await user.getIdToken();
                     console.log(auth.currentUser,idToken);
                     sendToken(idToken);
+                    goto("/");
                 }).catch((error) => {
                     console.log("oh naur");
                     // Handle Errors here.
@@ -27,6 +29,8 @@
                     console.log(errorCode,errorMessage);
                 });
             // redirect(308, "/");           
+        } else {
+            auth.signOut();
         }
     }
 
@@ -44,7 +48,14 @@
             .then(result => console.log(result))
             .catch(error => console.log('error', error));
     }
-
+    onAuthStateChanged(auth, (user) => {
+        if(user) {
+            buttonText = "Sign out my scarab";
+        }
+        else {
+            buttonText = "Sign in my scarab";
+        }
+    })
 </script>
 
 <Button class = "primary sm" on:click={handleLogin}>
