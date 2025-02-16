@@ -13,7 +13,7 @@
 
 
 <div class="image-container">
-    <img src="/California.png" alt="California Image" width="80%"/>  
+    <img src="/California2.png" alt="California2" width= "1300"/>  
 
 <Button class="button1" on:click={()=>console.log("Clicked1")}>
 

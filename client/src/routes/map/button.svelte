@@ -12,55 +12,53 @@
 			<slot/>
 	</button>
 
-<style>
-      .image-container {
-        position: relative; 
-        display: inline-block; 
-     }
 
-	.button1{   
-        position: absolute; 
-        top: 22%;
-        left: 28%;
-		background-color: transparent;
-        border: none;
-        border-radius: 5px;
-        aspect-ratio:1
-
-	}
-	.button2{   
-        position: absolute; 
-        top: 20%;
-        left: 8%;
-		background-color: transparent;
-        border: none;
-        border-radius: 5px;
-        aspect-ratio:1
-
-	}.button3{   
-        position: absolute; 
-        bottom: -40%;
-        right: 35%;
-        
-		background-color: transparent;
-        border: none;
-        border-radius: 5px;
-        aspect-ratio:1
-
-	}
-    .button4{   
-        position: absolute; 
-        bottom: -60%;
-        left: 35%;
-        
-		background-color: transparent;
-        border: none;
-        border-radius: 5px;
-        aspect-ratio:1
-
-	}
-    button:hover {
-        background-color: #9ac0f5; 
-    }
+    <style>
+        .image-container {
+            position: relative; 
+            display: inline-block;
+            width: 300px; 
+            height: 300px; 
+        }
     
-</style>
+        .button1, .button2, .button3, .button4 {
+            position: absolute;
+            background-color: transparent;
+            border: none;
+            border-radius: 5px;
+            transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+        }
+    
+        .button1 {
+            top: 150px;
+            left: 400px;
+        }
+    
+        .button2 {
+            top: 150px;
+            left: 100px;
+        }
+    
+        .button3 {
+            top: 1000px;
+            left: 800px;
+        }
+    
+        .button4 {
+            top: 1200px;
+            left: 600px;
+        }
+    
+        /* 按钮悬停效果 */
+        .button1:hover, .button2:hover, .button3:hover, .button4:hover {
+           
+            transform: scale(1.1);
+        }
+    
+        /* 可以考虑增加对 .image-container:hover 的样式 */
+        .image-container:hover {
+            background-color: #e0e0e0;
+            transform: scale(1.02);
+            transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+        }
+    </style>
