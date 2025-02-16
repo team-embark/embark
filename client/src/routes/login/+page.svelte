@@ -58,8 +58,11 @@
     })
 </script>
 
+
+<img src="/backgroundLogin.png" alt="/backgroundLogin" width= "1500" style="position: absolute; left: 0px; top: 0px;z-index=11;"/>
+<img src="/iconwithwhite.png" alt="/iconwithwhite" width= "100" style="position: fixed; left: 650px; top: 200px;z-index=17;"/>
 <div class="container">
-    <button class="signin" on:click={handleLogin}>
+    <button class="signin" style="position: fixed; left: 600px; top: 300px; z-index: 100;" on:click={handleLogin}>
         {buttonText}
     </button>
 </div>
@@ -72,7 +75,16 @@
         height: 60vh;
     }
     .signin {
-        padding: 4em !important;
-        font-size: large;
+        border: none;
+        border-radius: 20px;
+        width: 200px;
+        height: 60px;
+        font-size: 25px;
+        font-family: "Futura";
     }
+    .signin:hover {
+        transform: scale(1, 1.01);
+        background-color: rgb(214, 228, 221);
+    }
+
 </style>
