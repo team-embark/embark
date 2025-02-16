@@ -17,14 +17,9 @@
         <img src="/favicon.png" alt="logo" width= 30/>
     </Button>
     EMBARK
-<<<<<<< HEAD
     <Button class="transparentBtn" on:click={logout}>
         Log Out
     </Button>
-=======
-    <a href="/signin">Sign Out</a>
-    <a href="/Journal">journal</a>
->>>>>>> dde755b (Fixing something)
 </nav>
 </div>
 
