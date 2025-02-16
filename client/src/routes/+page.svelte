@@ -84,7 +84,7 @@
     Redwood
 </Button>
 
-<Button class="button3" on:click={() => {goto("/journal");}}>
+<Button class="button3" on:click={() => {goto("/journal/joshua-tree");}}>
     <img src="/JoshuaTree-2.png" alt="JoshuaTree-2" width= "100" />
     <br>
     Joshua Tree
