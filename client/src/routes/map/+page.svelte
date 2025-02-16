@@ -13,10 +13,11 @@
 
 
 <div class="image-container">
+    <img src="/California.png" alt="California Image" width="80%"/>  
 
-<Button class="button1" on:click={()=>console.log("Clicked")}>
+<Button class="button1" on:click={()=>console.log("Clicked1")}>
 
-    <img src="/YosemiteNationalPark-2.png" alt="YosemiteNationalPark-2" width= "100" />
+    <img src="/YosemiteNationalPark-2.png" alt="YosemiteNationalPark-2" width= "100"/>
     <br>
     Yosemite
 </Button>
@@ -32,6 +33,11 @@
     <br>
     Joshua Tree
 </Button>
-    <img src="/California.png" alt="California Image" width= "1300" />  
+   
+<Button class="button4" on:click={()=>console.log("Clicked")}>
+    <img src="/channelIslands.png" alt="channelIslands" width= "100" />
+    <br>
+    Channel Islands
+</Button>
 
 </div>
