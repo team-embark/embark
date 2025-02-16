@@ -68,7 +68,7 @@
 		font-family: 'Futura';
 		font-size: 2em;
         text-align: center;
-        margin-top: 150px;
+        margin-top: 8rem;
 	}
     .image {
 		position: fixed;
