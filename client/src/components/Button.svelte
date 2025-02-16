@@ -3,6 +3,7 @@
 	let buttonProps = {
 	class:[$$restProps.class]
 	}
+
 </script>
 	<button on:click
 			on:mouseover
@@ -61,8 +62,6 @@
             z-index:30;
             color: black;
             font-size: 1.5rem;
-            font-family: "Futura", "Trebuchet MS", Arial, sans-serif;
-            font-style: italic;
             background-color: transparent;
             
         }
@@ -74,8 +73,6 @@
             color: black;
             font-size: 1.5rem;
             z-index:20;
-            font-family: "Futura", "Trebuchet MS", Arial, sans-serif;
-            font-style: italic;
             background-color: transparent;
             
         }
@@ -90,5 +87,11 @@
             background-color: #e0e0e0;
             transform: scale(1.02);
             transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+        }
+
+        button {
+            font-family: "Futura", "Trebuchet MS", Arial, sans-serif;
+            font-style: italic;
+            font-weight: 500;
         }
     </style>

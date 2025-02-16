@@ -81,7 +81,7 @@
 <Button class="button2" on:click={() => {console.log("Redwood");}}>
     <img src="/RedWoodNationalPark-2.png" alt="RedWoodNationalPark-2" width= "100" />
     <br>
-    Red Wood
+    Redwood
 </Button>
 
 <Button class="button3" on:click={() => {goto("/journal");}}>
