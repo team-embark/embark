@@ -52,8 +52,15 @@
             top: 320px;
             left: 350px;
         }
+        .transparentBtn {
+            border-width: 0px;
+            color: white;
+            font-size: 1em;
+            background-color: transparent;
+            
+        }
 
-        .button1:hover, .button2:hover, .button3:hover, .button4:hover, .button5:hover {
+        .button1:hover, .button2:hover, .button3:hover, .button4:hover, .button5:hover, .transparentBtn:hover {
            
             transform: scale(1.1);
         }

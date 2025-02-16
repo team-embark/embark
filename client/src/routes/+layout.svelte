@@ -1,5 +1,5 @@
 <script>
-    import Button from "./map/button.svelte";
+    import Button from "../components/Button.svelte";
     import {auth} from "../firebase_yippee";
     import {goto} from "$app/navigation";
 	let { children } = $props();
@@ -13,10 +13,14 @@
 
 <div class="banner">
   <nav>
-	<a href="/">home</a>
-	<a href="/">map</a>
+	<Button class="transparentBtn" on:click={() => goto("/")}>
+        <img src="/favicon.png" alt="logo" width= 30/>
+    </Button>
     EMBARK
-    <a href="#" on:click={logout}>Logout</a>
+    <Button class="transparentBtn" on:click={logout}>
+        Log Out
+    </Button>
+    <a href="/Journal">journal debug</a>
 </nav>
 </div>
 

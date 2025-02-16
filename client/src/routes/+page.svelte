@@ -8,7 +8,7 @@
   </style>
 
 <script>
-    import Button from "./map/Button.svelte";  
+    import Button from "../components/Button.svelte";  
     import {app, auth} from "../firebase_yippee";
     import {onAuthStateChanged, GoogleAuthProvider} from 'firebase/auth';
 
