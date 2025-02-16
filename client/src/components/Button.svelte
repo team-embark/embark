@@ -30,7 +30,7 @@
         }
     
         .button1 {
-            top: 200px;
+            top: 500px;
             left: 400px;
         }
     
@@ -45,15 +45,20 @@
         }
     
         .button4 {
+            filter: grayscale(1);
             top: 1200px;
             left: 600px;
         }
         .button5 {
+            filter: grayscale(1);
             top: 320px;
             left: 350px;
         }
         .transparentBtn {
             border-width: 0px;
+            position:fixed;
+            left:20px;
+            z-index:30;
             color: black;
             font-size: 1.5rem;
             font-family: "Futura", "Trebuchet MS", Arial, sans-serif;
@@ -61,13 +66,26 @@
             background-color: transparent;
             
         }
+        .transparentBtn1 {
+            border-width: 0px;
+            position:fixed;
+            right:100px;
+            top:45px;
+            color: black;
+            font-size: 1.5rem;
+            z-index:20;
+            font-family: "Futura", "Trebuchet MS", Arial, sans-serif;
+            font-style: italic;
+            background-color: transparent;
+            
+        }
+    
 
-        .button1:hover, .button2:hover, .button3:hover, .button4:hover, .button5:hover, .transparentBtn:hover {
-           
+        .button1:hover, .button2:hover, .button3:hover,.transparentBtn:hover, .transparentBtn1:hover {
+    
             transform: scale(1.1);
         }
     
-      
         .image-container:hover {
             background-color: #e0e0e0;
             transform: scale(1.02);
