@@ -11,13 +11,7 @@
     import Button from "./map/Button.svelte";  
     import {app, auth} from "../firebase_yippee";
     import {onAuthStateChanged, GoogleAuthProvider} from 'firebase/auth';
-    import { redirect } from "@sveltejs/kit";
 
-    onAuthStateChanged(auth, (user) => {
-        if(user) {
-            redirect(307, '/signin');
-        }
-    })
 </script>
 
 
