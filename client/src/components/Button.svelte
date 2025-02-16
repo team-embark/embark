@@ -1,5 +1,5 @@
 <script>
-	
+	export let disabled = false;
 	let buttonProps = {
 	class:[$$restProps.class]
 	}
@@ -9,6 +9,7 @@
 			on:mouseover
 			on:mouseenter
 			on:mouseleave
+            {disabled}
 		{...buttonProps}>
 			<slot/>
 	</button>

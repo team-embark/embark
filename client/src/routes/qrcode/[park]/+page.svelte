@@ -5,6 +5,7 @@
     import CenteredBox from "./CenteredBox.svelte";
     import NewTextComponent from "./NewTestComponent.svelte";
     import ButtonComponent from "./ButtonComponent.svelte";
+    import { goto } from "$app/navigation";
 
 
     let parkname = $state("");
@@ -55,21 +56,23 @@
 
 <div>
 	<p>Thanks for visiting {parks[parkname]}!</p>
-	<CenteredBox width="60em" height="40em" />
-	<NewTextComponent text="Fun fact!" />
+	<!-- <CenteredBox width="60em" height="40em" /> -->
+	<!-- <NewTextComponent text="Fun fact!" /> -->
+     <button on:click={()=>{goto("/journal/joshua-tree")}}>Go to Journal</button>
 	<img src="/YosemiteNationalPark-2.png" alt="YosemiteNationalPark-2" width= "200" class="image"/>
 </div>
 
 <style>
 	p {
 		color: goldenrod;
-		font-family: 'Comic Sans MS', cursive;
+		font-family: 'Futura';
 		font-size: 2em;
-    text-align: center;
+        text-align: center;
+        margin-top: 150px;
 	}
     .image {
 		position: fixed;
-		bottom: 450px; /* 20px from bottom */
-		right: 1075px; /* 20px from right */
+		bottom: 20%;
+		right: 20%;
 	}
 </style>
