@@ -64,6 +64,7 @@
         width: 200px;
         height: auto;
         margin-bottom: 20px;
+        margin-top: 8rem;
     }
 
     .text {

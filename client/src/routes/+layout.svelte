@@ -33,6 +33,7 @@
         font-size: 1.5rem;
         border-radius: 4px;
         z-index:10;
+        top: 0;
     }
 </style>
 
