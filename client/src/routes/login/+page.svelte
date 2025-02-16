@@ -1,5 +1,4 @@
 <script>
-    import Button from "./button.svelte"
     import {app, auth, provider} from '../../firebase_yippee';
     import {signInWithPopup, onAuthStateChanged, GoogleAuthProvider} from 'firebase/auth';
     import {goto} from "$app/navigation";
@@ -50,14 +49,29 @@
     }
     onAuthStateChanged(auth, (user) => {
         if(user) {
-            buttonText = "Sign out my scarab";
+            buttonText = "Log out";
         }
         else {
-            buttonText = "Sign in my scarab";
+            buttonText = "Log in";
         }
     })
 </script>
 
-<Button class = "primary sm" on:click={handleLogin}>
-    {buttonText}
-</Button>
+<div class="container">
+    <button class="signin" on:click={handleLogin}>
+        {buttonText}
+    </button>
+</div>
+
+<style>
+    div.container {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        height: 60vh;
+    }
+    .signin {
+        padding: 4em !important;
+        font-size: large;
+    }
+</style>
