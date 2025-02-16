@@ -3,7 +3,7 @@
     import {signInWithPopup, onAuthStateChanged, GoogleAuthProvider} from 'firebase/auth';
     import {goto} from "$app/navigation";
 
-    let buttonText = "Sign in my scarab";
+    let buttonText = "Log in";
 
     function handleLogin() {
         console.log("hi");
