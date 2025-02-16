@@ -2,6 +2,7 @@
     import Button from "./button.svelte"
     import {app, auth, provider} from '../../firebase_yippee';
     import {signInWithPopup, onAuthStateChanged, GoogleAuthProvider} from 'firebase/auth';
+    import { redirect } from "@sveltejs/kit";
 
     let buttonText = "Sign in my scarab";
 
@@ -25,9 +26,7 @@
                     const errorMessage = error.message;
                     console.log(errorCode,errorMessage);
                 });
-        }
-        else {
-            auth.signOut();
+            // redirect(308, "/");           
         }
     }
 
@@ -45,14 +44,6 @@
             .then(result => console.log(result))
             .catch(error => console.log('error', error));
     }
-
-    onAuthStateChanged(auth, (user) => {
-        if(user) {
-            buttonText = "Sign out my scarab";
-        } else {
-            buttonText = "Sign in my scarab";
-        }
-    })
 
 </script>
 
