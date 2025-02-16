@@ -21,7 +21,7 @@
             height: 300px; 
         }
     
-        .button1, .button2, .button3, .button4 {
+        .button1, .button2, .button3, .button4, .button5 {
             position: absolute;
             background-color: transparent;
             border: none;
@@ -30,12 +30,12 @@
         }
     
         .button1 {
-            top: 150px;
+            top: 200px;
             left: 400px;
         }
     
         .button2 {
-            top: 150px;
+            top: 200px;
             left: 100px;
         }
     
@@ -48,9 +48,12 @@
             top: 1200px;
             left: 600px;
         }
-    
+        .button5 {
+            top: 320px;
+            left: 350px;
+        }
 
-        .button1:hover, .button2:hover, .button3:hover, .button4:hover {
+        .button1:hover, .button2:hover, .button3:hover, .button4:hover, .button5:hover {
            
             transform: scale(1.1);
         }

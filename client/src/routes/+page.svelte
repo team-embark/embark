@@ -43,4 +43,11 @@
     Channel Islands
 </Button>
 
+<Button class="button5" on:click={()=>console.log("Clicked")}>
+    <img src="/LassenVolcanic.png" alt="LassenVolcanic" width= "100" />
+    <br>
+    Lassen Volcanic
+</Button>
+
+
 </div>
