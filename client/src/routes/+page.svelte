@@ -30,7 +30,8 @@
  
 
     let visitedParks = $state(0);
-    let parks = ["josh", "yosemite", "redwood"];
+    const parks = ["josh", "yosemite", "redwood"];
+    let data = $state({});
 
     $effect(()=> {
         onAuthStateChanged(auth, (user) => {
@@ -55,6 +56,7 @@
         const response = await fetch("http://localhost:8080/allparks", requestOptions)
             .then(response => response.json())
             .then(result => {
+                data = result;
                 for (const p of parks) {
                     if (result[p]){
                         visitedParks += 1;
@@ -71,32 +73,32 @@
 <div class="image-container">
     <img src="/California2.png" alt="California2" width= "1300"/>  
 
-<Button class="button1" on:click={() => {console.log("Yosemite");}}>
+<Button class="button1" on:click={() => {console.log("Yosemite");}} disabled={data["yosemite"]}>
 
     <img src="/YosemiteNationalPark-2.png" alt="YosemiteNationalPark-2" width= "100"/>
     <br>
     Yosemite
 </Button>
 
-<Button class="button2" on:click={() => {console.log("Redwood");}}>
+<Button class="button2" on:click={() => {console.log("Redwood");}} disabled={data["redwood"]}>
     <img src="/RedWoodNationalPark-2.png" alt="RedWoodNationalPark-2" width= "100" />
     <br>
     Redwood
 </Button>
 
-<Button class="button3" on:click={() => {goto("/journal/joshua-tree");}}>
+<Button class="button3" on:click={() => {goto("/journal/joshua-tree");} disabled={data["josh"]}}>
     <img src="/JoshuaTree-2.png" alt="JoshuaTree-2" width= "100" />
     <br>
     Joshua Tree
 </Button>
    
-<Button class="button4" on:click={() => {{console.log("Channel Islands");}}}>
+<Button class="button4" on:click={() => {{console.log("Channel Islands");}}} disabled>
     <img src="/channelIslands.png" alt="channelIslands" width= "100" />
     <br>
     Channel Islands
 </Button>
 
-<Button class="button5" on:click={() => console.log("LassenVolcanic")}>
+<Button class="button5" on:click={() => console.log("LassenVolcanic")} disabled>
     <img src="/LassenVolcanic.png" alt="LassenVolcanic" width= "100" />
     <br>
     Lassen Volcanic
