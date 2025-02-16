@@ -11,9 +11,9 @@
 
     .right-panel {
         position: absolute;
-        top: 30px; 
+        top: 120px; 
         right: 40px; 
-        font-size: 3.0rem;
+        font-size: 5.0rem;
         font-weight: bold;
         text-align: right;
         background-color: rgba(255, 255, 255, 0.8); 
@@ -105,7 +105,9 @@
     Lassen Volcanic
 </Button>
 
+
 <div class="right-panel">
+    
     <p>{visitedParks}/5</p>
 </div>
 
