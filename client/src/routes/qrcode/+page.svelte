@@ -1,9 +1,9 @@
 <script>
   import CenteredBox from "./CenteredBox.svelte";
   import NewTextComponent from "./NewTestComponent.svelte";
-  import ButtonComponent from "./ButtonComponent.svelte";
+  import ButtonComponent from "./[park]/ButtonComponent.svelte";
 
-  let parkname = "fungus";
+  let {parkname} = $props();
 </script>
 <div>
 	<p>Thanks for visiting {parkname}!</p>
