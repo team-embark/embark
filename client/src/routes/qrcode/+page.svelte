@@ -10,12 +10,12 @@
 	<CenteredBox width="60em" height="40em" />
 	<NewTextComponent text="Fun fact!" />
 	<ButtonComponent label="To Journal" />
-	<img src="/YosemiteNationalPark-2.png" alt="YosemiteNationalPark-2" width= "200" class="image"/>
+	<img src="/JoshuaTree-2.png" alt="Joshua Tree National Park" width= "500" class="image"/>
 	<style>
 		.image {
-		  position: fixed;
-		  bottom: 450px; /* 20px from bottom */
-		  right: 1075px; /* 20px from right */
+		  	display: flex;
+    		justify-content: center;        /* Centers content horizontally */
+    		align-items: center; 
 		}
 	  </style>
 </div>
