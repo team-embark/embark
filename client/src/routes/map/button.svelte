@@ -49,13 +49,13 @@
             left: 600px;
         }
     
-        /* 按钮悬停效果 */
+
         .button1:hover, .button2:hover, .button3:hover, .button4:hover {
            
             transform: scale(1.1);
         }
     
-        /* 可以考虑增加对 .image-container:hover 的样式 */
+      
         .image-container:hover {
             background-color: #e0e0e0;
             transform: scale(1.02);
