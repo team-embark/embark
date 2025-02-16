@@ -2,9 +2,11 @@
   import CenteredBox from "./CenteredBox.svelte";
   import NewTextComponent from "./NewTestComponent.svelte";
   import ButtonComponent from "./ButtonComponent.svelte";
+
+  let parkname = "fungus";
 </script>
 <div>
-	<p>Thanks for visiting __!</p>
+	<p>Thanks for visiting {parkname}!</p>
 	<CenteredBox width="60em" height="40em" />
 	<NewTextComponent text="Fun fact!" />
 	<ButtonComponent label="To Journal" />

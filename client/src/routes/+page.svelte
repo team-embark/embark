@@ -33,13 +33,10 @@
     let parks = ["josh", "yosemite", "redwood"];
 
     $effect(()=> {
-        console.log(auth.currentUser);
-        if (auth.currentUser){
-            countParks();
-        }
         onAuthStateChanged(auth, (user) => {
         if (user) {
             console.log("yay");
+            countParks();
         } else {
             goto("/login");
         }
