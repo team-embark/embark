@@ -17,12 +17,6 @@
         position: relative; 
         display: inline-block; 
      }
-     .image-container Button {
-    
-    position: absolute; 
-    transform: translate(-50%, -50%); 
-
-    }
 
 	.button1{   
         position: absolute; 
@@ -52,6 +46,18 @@
         border: none;
         border-radius: 5px;
         aspect-ratio:1
+
+	}
+    .button4{   
+        position: absolute; 
+        bottom: -60%;
+        left: 35%;
+        
+		background-color: transparent;
+        border: none;
+        border-radius: 5px;
+        aspect-ratio:1
+
 	}
     button:hover {
         background-color: #9ac0f5; 
