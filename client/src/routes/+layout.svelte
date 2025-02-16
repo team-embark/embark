@@ -1,6 +1,13 @@
 <script>
     import Button from "./map/button.svelte";
+    import {auth} from "../firebase_yippee";
+    import {goto} from "$app/navigation";
 	let { children } = $props();
+
+    function logout() {
+        auth.signOut();
+        goto("/login");
+    }
 </script>
 
 
@@ -9,7 +16,7 @@
 	<a href="/">home</a>
 	<a href="/">map</a>
     EMBARK
-    <a href="/signin">Sign Out</a>
+    <a href="#" on:click={logout}>Logout</a>
 </nav>
 </div>
 
