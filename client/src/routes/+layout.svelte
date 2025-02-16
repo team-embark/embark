@@ -20,7 +20,6 @@
     <Button class="transparentBtn" on:click={logout}>
         Log Out
     </Button>
-    <a href="/Journal">journal debug</a>
 </nav>
 </div>
 

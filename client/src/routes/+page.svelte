@@ -1,6 +1,4 @@
 
-
-
 <style>
     :global(body) {
       background-color: #b5e6ff;
@@ -11,7 +9,7 @@
     import Button from "../components/Button.svelte";  
     import {app, auth} from "../firebase_yippee";
     import {onAuthStateChanged, GoogleAuthProvider} from 'firebase/auth';
-
+    import {goto} from "$app/navigation";
 </script>
 
 
@@ -31,13 +29,13 @@
     Red Wood
 </Button>
 
-<Button class="button3" on:click={()=>console.log("Clicked")}>
+<Button class="button3" on:click={() => goto("/journal")}>
     <img src="/JoshuaTree-2.png" alt="JoshuaTree-2" width= "100" />
     <br>
     Joshua Tree
 </Button>
    
-<Button class="button4" on:click={()=>console.log("Clicked")}>
+<Button class="button4" on:click={() =>console.log("Clicked")}>
     <img src="/channelIslands.png" alt="channelIslands" width= "100" />
     <br>
     Channel Islands
